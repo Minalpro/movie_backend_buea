@@ -130,7 +130,7 @@ def list_ratings(
 
 #---Endpoint pour retourner un tag pour un utilisateur et un film donnes avec le texte du tag--- #
 @app.get(
-    "/tags/{movie_id}/{user_id}",
+    "/tags/{user_id}/{movie_id}/{tag_text}",
     summary="Obtenir un tag specifique",
     description = "Retourne un tag pour un utilisateur et un film donnes avec le texte du tag",
     response_model = schemas.TagSimple,
