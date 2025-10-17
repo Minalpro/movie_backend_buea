@@ -228,3 +228,4 @@ def get_analytics(db: Session = Depends(get_db)):
         tag_count=tag_count,
         link_count=link_count
     )
+
