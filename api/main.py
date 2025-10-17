@@ -125,7 +125,7 @@ def list_ratings(
     min_rating: Optional[float] = Query(None, ge=0.0, le=5.0, description="Filtrer les notes superieures ou egales a cette valeur"),
     db: Session = Depends(get_db),
 ):
-    ratings = helpers.get_ratings(db, skip=skip, limit=limit, movie_id=movie_id, user_id=user_id, min_rating=min_rating),
+    ratings = helpers.get_ratings(db, skip=skip, limit=limit, movie_id=movie_id, user_id=user_id, min_rating=min_rating)
     return ratings
 
 #---Endpoint pour retourner un tag pour un utilisateur et un film donnes avec le texte du tag--- #
